@@ -13,6 +13,12 @@ export const Container = styled.button`
   margin-top: 16px;
   transition: background-color 0.2s;
 
+  &:focus {
+    background: ${shade(0.2, '#ff9000')};
+    border: 1px solid #f4ede8;
+    outline: 0px;
+  }
+
   &:hover {
     background: ${shade(0.2, '#ff9000')};
   }
