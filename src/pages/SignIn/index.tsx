@@ -9,8 +9,13 @@ import Button from '../../components/Button';
 
 import { Container, Content, Background } from './styles';
 
+interface requestSignIn {
+  email: string;
+  passord: string;
+}
+
 const SignIn: React.FC = () => {
-  function handleSubmit(data: object): void {
+  function handleSubmit(data: requestSignIn): void {
     console.log(data);
   }
   return (

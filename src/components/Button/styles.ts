@@ -15,11 +15,11 @@ export const Container = styled.button`
 
   &:focus {
     background: ${shade(0.2, '#ff9000')};
-    border: 1px solid #f4ede8;
+    border: 2px solid #f4ede8;
     outline: 0px;
   }
-
   &:hover {
     background: ${shade(0.2, '#ff9000')};
+    border: 2px solid #f4ede8;
   }
 `;
