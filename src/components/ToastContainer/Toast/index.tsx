@@ -11,6 +11,8 @@ import { Container } from './styles';
 
 interface ToastProps {
   toastData: ToastMessage;
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  style: object;
 }
 
 const icons = {
@@ -19,7 +21,7 @@ const icons = {
   success: <FiCheckCircle size={24} />,
 };
 
-const Toast: React.FC<ToastProps> = ({ toastData }) => {
+const Toast: React.FC<ToastProps> = ({ toastData, style }) => {
   const { removeToast } = useToast();
 
   useEffect(() => {
@@ -32,7 +34,11 @@ const Toast: React.FC<ToastProps> = ({ toastData }) => {
   }, [toastData.id, removeToast]);
 
   return (
-    <Container type={toastData.type} hasDescription={!!toastData.description}>
+    <Container
+      type={toastData.type}
+      hasDescription={!!toastData.description}
+      style={style}
+    >
       {icons[toastData.type || 'info']}
       <div>
         <strong>{toastData.title}</strong>
